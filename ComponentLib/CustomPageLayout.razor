@@ -1,0 +1,20 @@
+﻿@inherits ComponentBase
+
+<div class="layout">
+    @if (SidebarContent is not null)
+    {
+        <div class="sidebar">
+            @SidebarContent
+        </div>
+    }
+    <div class="main">
+        @PageContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? SidebarContent { get; set; }
+    [Parameter, EditorRequired]
+    public RenderFragment PageContent { get; set; } = null!;
+}

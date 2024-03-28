@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <PiralInstance>../appshell/dist/emulator/appshell-1.0.0.tgz</PiralInstance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MainLayout.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.17" />
+    <PackageReference Include="Piral.Blazor.DevServer" Version="7.0.13" />
+	<PackageReference Include="Piral.Blazor.Tools" Version="7.0.13" />
+	<PackageReference Include="Piral.Blazor.Utils" Version="7.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ComponentLib\ComponentLib.csproj" />
+  </ItemGroup>
+
+</Project>
